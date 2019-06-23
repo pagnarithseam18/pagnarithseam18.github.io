@@ -1,77 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <meta name="viewport" content="width=device-width initial-scale=1.0">
-        <meta name="author" content="Pagnarith">
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular-route.js"></script>
-        <title>Pagnarith's Web Page</title>
-        <style>
-            h1
-            {
-                text-align: center;
-                color: white;
-            }
-            a.home
-            {
-                position: absolute;
-                top: 10%;
-                left: 35%;
-                text-decoration: none;
-                color: white;
-                font-family: sans-serif;
-                padding: 50px;
-            }
-            a.about
-            {
-                position: absolute;
-                top: 10%;
-                left: 55%;
-                text-decoration: none;
-                color: white;
-                font-family: sans-serif;
-                padding: 50px;
-            }
-            div
-            {
-                position: absolute;
-                top: 35%;
-                left: 40%;
-                background-color: white;
-                color: black;   
-            }
-            h1.about
-            {
-                color:black;
-            }
-            p.info
-            {
-                position: relative;
-                top: 25%;
-            }
-        </style>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<title></title>
 </head>
-<body ng-app="myApp" bgcolor="black">
-    <h1>Welcome to my Web Page! 
-        <a href="#!/" class="home">Home</a>
-        <a href="#!about" class="about">About</a>
-        
-    <div ng-view></div>
+<body>
 
-    <script>
-    var app = angular.module("myApp",["ngRoute"]);
-    app.config(function($routeProvider){
-        $routeProvider
-        .when("/",{
-            templateUrl : "main.html"
-        })
-        .when("/about",{
-            templateUrl : "about.html"
-        });
-    });
-    </script>
-    </h1>
+	<aside>
+		<nav>
+			<img src="me.jpg" alt="">
+			<a href="#home"><i class="material-icons md-36">home</i>
+			<p>Home</p>
+			</a>
+
+			<a href="#about"><i class="material-icons md-36">person</i>
+			<p>About</p>
+			</a>
+
+			<a href="#folio"><i class="material-icons md-36">image</i>
+			<p>Folio</p>
+			</a>
+
+			<a href="#contact"><i class="material-icons md-36">mail</i>
+			<p>Contact</p>
+			</a>
+		</nav>
+	</aside>
+
+	<main>
+		<header class="home" id="home"><br><br>
+			<h1>I'm Sopagnarith Seam</h1>
+			<h5>Programmer // eSports athlete</h5>
+			<img src="me.jpg" alt="">
+		</header>
+	</main>
+
+	<section class="about" id="about">
+		<h2>About Me</h2>
+		<p>
+			<span>Hello, I'm Pagnarith</span> I'm currently a freshman in Software Engineering at Kirirom Institute of Technology. I love playing video games, listening to music and especially eating.	
+		</p>
+	</section>
+
+	<footer>
+		<section class="top-bar">
+			<a href=""><i class="fab fa-facebook-f"></i></a>
+			<a href=""><i class="fab fa-twitter"></i></a>
+			<a href=""><i class="fab fa-github"></i></a>
+		</section>
+
+		<section class="bottom-bar">
+			<p>&copy 2019 |  All rights reserved</p>
+		</section>
+	</footer>
 </body>
 </html>
