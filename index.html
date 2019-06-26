@@ -1,17 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<meta name="author" content="Sopagnarith Seam">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="This website is about Sopagnarith Seam">
+	<meta name="keywords" content="Pagnarith, KIT, Batch 6, Section A, eSports Athlete, Khmer, Cambodian, League of Legends">
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/2.0.0/jquery.localScroll.min.js"></script>
 	<title></title>
+
+	<script type="text/javascript">
+		$(document).on('click', 'aside nav a',function()
+		{
+			$(this).addClass('active').siblings().removeClass('active')
+		})
+
+		$(window).scroll(function()
+		{
+				var currentScrollPosition = $(document).scrollTop();
+					if(currentScrollPosition<document.getElementsByTagName('HTML')[0].outerHTML.length*0.08)
+					$("aside nav a:nth-child(1)").addClass('active').siblings().removeClass('active')
+				else if(currentScrollPosition<document.getElementsByTagName('HTML')[0].outerHTML.length*0.18)
+					$("aside nav a:nth-child(2)").addClass('active').siblings().removeClass('active')
+				else if(currentScrollPosition<document.getElementsByTagName('HTML')[0].outerHTML.length*0.25)
+					$("aside nav a:nth-child(3)").addClass('active').siblings().removeClass('active')
+				else 
+					$("aside nav a:nth-child(4)").addClass('active').siblings().removeClass('active')
+		})
+
+		$(document).ready(function(){
+			$('aside').localScroll();
+		})
+	</script>
 </head>
 <body>
 
 	<aside>
+		<div class="vertical-align">
 		<nav>
-			<img src="me.jpg" alt="">
-			<a href="#home"><i class="material-icons md-36">home</i>
+			<a href="#home" class="home"><i class="material-icons md-36">home</i>
 			<p>Home</p>
 			</a>
 
@@ -27,7 +59,16 @@
 			<p>Contact</p>
 			</a>
 		</nav>
+		</div>
 	</aside>
+
+	<nav class="mobile-nav">
+		<a href="#home">Home</a>
+		<a href="#about">About</a>
+		<a href="#folio">Folio</a>
+		<a href="#contact">Contact</a>
+
+	</nav>
 
 	<main>
 		<header class="home" id="home"><br><br>
@@ -35,25 +76,71 @@
 			<h5>Programmer // eSports athlete</h5>
 			<img src="me.jpg" alt="">
 		</header>
-	</main>
 
 	<section class="about" id="about">
 		<h2>About Me</h2>
 		<p>
 			<span>Hello, I'm Pagnarith</span> I'm currently a freshman in Software Engineering at Kirirom Institute of Technology. I love playing video games, listening to music and especially eating.	
 		</p>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean felis mi, varius a urna at, maximus vulputate nisi. Sed sollicitudin pellentesque volutpat. Fusce faucibus at ipsum at mattis. Nam quis consectetur nunc. Aenean eget condimentum tellus, sit amet varius turpis. Phasellus sit amet augue et lectus auctor aliquam at at lorem. Integer sit amet mattis eros. Donec vitae tellus accumsan risus accumsan elementum. Aliquam erat volutpat. Sed et elit in velit consectetur vulputate. Cras nec eleifend ante. Etiam efficitur orci eget porttitor sodales. Nunc posuere fringilla feugiat. Vestibulum non lobortis metus. Nam in orci enim.
+
+Integer in justo sed tellus volutpat iaculis. In hac habitasse platea dictumst. Ut molestie lacinia lorem in eleifend. In gravida feugiat ante vitae feugiat. Vivamus aliquam diam vel urna aliquam, non viverra urna rhoncus. Nam mattis mauris vel sem rhoncus condimentum sed id lectus. Ut nec pretium arcu, id vehicula velit. Sed finibus arcu ac ante dignissim luctus. Vestibulum blandit eros metus, at volutpat urna consectetur sit amet. In congue, dolor eu placerat bibendum, elit quam semper est, vitae dictum libero felis vel neque. Sed in urna tincidunt augue feugiat tincidunt id vitae odio. Donec mattis, neque vitae malesuada dignissim, mi augue tristique augue, ac convallis nisi turpis condimentum sem. Curabitur hendrerit mollis placerat. Aliquam erat volutpat. Aliquam sed orci augue.
+
+Ut placerat sapien libero, vel sagittis velit elementum sit amet. Etiam tristique eros turpis, et vestibulum felis tempor quis. Pellentesque suscipit massa quis arcu auctor, eu viverra arcu laoreet. Ut viverra nibh tortor, id ornare justo posuere non. Donec et rhoncus ipsum, ac dignissim nisl. Maecenas et posuere dolor. Duis vestibulum, orci sed pharetra ullamcorper, elit mi imperdiet lacus, quis venenatis ipsum dui vitae erat. Nunc et ligula placerat, tincidunt est eleifend, euismod orci. Etiam sit amet sollicitudin tortor. Etiam aliquet mollis lacus a porttitor.
+
+Integer metus tortor, venenatis sed semper et, laoreet a nisl. Aliquam condimentum ipsum et metus lacinia sodales ac non neque. Morbi sed accumsan ligula, eu maximus urna. Nulla molestie dolor feugiat ex lobortis, quis feugiat velit mollis. Sed a risus non augue lobortis fermentum. Nullam sem urna, maximus non mauris eget, molestie finibus velit. Quisque et felis quis ante accumsan porttitor.
+
+Vivamus nulla lorem, mollis non leo id, dictum lacinia lectus. Nullam et nulla tempor, dictum purus ut, dignissim nunc. Morbi tristique dictum fermentum. In bibendum dolor a nibh dignissim dictum quis vel dolor. Morbi suscipit turpis vitae est rhoncus, eu maximus risus aliquam. Donec maximus sagittis rutrum. Aenean eget bibendum lectus. Ut mi libero, aliquam eu mauris vel, consequat dignissim dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus quis diam sed libero dignissim consectetur. Integer tincidunt erat metus, commodo malesuada neque consectetur in. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae est volutpat, ultricies nisi mollis, semper ipsum.</p>
+
+		<p>I have experience with HTML, CSS, Javascript, C, Java, KOTLIN, Python, Photoshop, Git, Github, and Vegas Pro.</p>
+
+		<h3>My Skills</h3>
+
 	</section>
+
+	<section class="folio" id="folio">
+			<h2>Folio</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean felis mi, varius a urna at, maximus vulputate nisi. Sed sollicitudin pellentesque volutpat. Fusce faucibus at ipsum at mattis. Nam quis consectetur nunc. Aenean eget condimentum tellus, sit amet varius turpis. Phasellus sit amet augue et lectus auctor aliquam at at lorem. Integer sit amet mattis eros. Donec vitae tellus accumsan risus accumsan elementum. Aliquam erat volutpat. Sed et elit in velit consectetur vulputate. Cras nec eleifend ante. Etiam efficitur orci eget porttitor sodales. Nunc posuere fringilla feugiat. Vestibulum non lobortis metus. Nam in orci enim.
+
+Integer in justo sed tellus volutpat iaculis. In hac habitasse platea dictumst. Ut molestie lacinia lorem in eleifend. In gravida feugiat ante vitae feugiat. Vivamus aliquam diam vel urna aliquam, non viverra urna rhoncus. Nam mattis mauris vel sem rhoncus condimentum sed id lectus. Ut nec pretium arcu, id vehicula velit. Sed finibus arcu ac ante dignissim luctus. Vestibulum blandit eros metus, at volutpat urna consectetur sit amet. In congue, dolor eu placerat bibendum, elit quam semper est, vitae dictum libero felis vel neque. Sed in urna tincidunt augue feugiat tincidunt id vitae odio. Donec mattis, neque vitae malesuada dignissim, mi augue tristique augue, ac convallis nisi turpis condimentum sem. Curabitur hendrerit mollis placerat. Aliquam erat volutpat. Aliquam sed orci augue.
+
+Ut placerat sapien libero, vel sagittis velit elementum sit amet. Etiam tristique eros turpis, et vestibulum felis tempor quis. Pellentesque suscipit massa quis arcu auctor, eu viverra arcu laoreet. Ut viverra nibh tortor, id ornare justo posuere non. Donec et rhoncus ipsum, ac dignissim nisl. Maecenas et posuere dolor. Duis vestibulum, orci sed pharetra ullamcorper, elit mi imperdiet lacus, quis venenatis ipsum dui vitae erat. Nunc et ligula placerat, tincidunt est eleifend, euismod orci. Etiam sit amet sollicitudin tortor. Etiam aliquet mollis lacus a porttitor.
+
+Integer metus tortor, venenatis sed semper et, laoreet a nisl. Aliquam condimentum ipsum et metus lacinia sodales ac non neque. Morbi sed accumsan ligula, eu maximus urna. Nulla molestie dolor feugiat ex lobortis, quis feugiat velit mollis. Sed a risus non augue lobortis fermentum. Nullam sem urna, maximus non mauris eget, molestie finibus velit. Quisque et felis quis ante accumsan porttitor.
+
+Vivamus nulla lorem, mollis non leo id, dictum lacinia lectus. Nullam et nulla tempor, dictum purus ut, dignissim nunc. Morbi tristique dictum fermentum. In bibendum dolor a nibh dignissim dictum quis vel dolor. Morbi suscipit turpis vitae est rhoncus, eu maximus risus aliquam. Donec maximus sagittis rutrum. Aenean eget bibendum lectus. Ut mi libero, aliquam eu mauris vel, consequat dignissim dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus quis diam sed libero dignissim consectetur. Integer tincidunt erat metus, commodo malesuada neque consectetur in. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae est volutpat, ultricies nisi mollis, semper ipsum.</p>
+	</section>
+
+	<section class="contact" id="contact">
+		<h2>Contact</h2>
+			<div class="container">
+				<form action="https://formspree.io/supbot41@gmail.com" method="POST">
+					<label for="name">Name</label>
+					<input type="text" id="name" name="name">
+					<label for="email">E-mail</label>
+					<input type="text" id="email" name="email">
+					<label for="message">Message</label>
+					<textarea name="message" id="message" style="height:200px"></textarea>
+					<input type="submit" value="Message">
+				</form>
+			</div>
+		
+	</section>
+
+	</main>
 
 	<footer>
 		<section class="top-bar">
-			<a href=""><i class="fab fa-facebook-f"></i></a>
-			<a href=""><i class="fab fa-twitter"></i></a>
-			<a href=""><i class="fab fa-github"></i></a>
+			<a href="https://www.facebook.com/boobyL"><i class="fab fa-facebook-f"></i></a>
+			<a href="https://www.twitter.com/booby_twit"><i class="fab fa-twitter"></i></a>
+			<a href="https://www.github.com/pagnarithseam18"><i class="fab fa-github"></i></a>
 		</section>
 
 		<section class="bottom-bar">
 			<p>&copy 2019 |  All rights reserved</p>
 		</section>
 	</footer>
+
 </body>
 </html>

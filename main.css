@@ -12,7 +12,7 @@ body{
 	background: #000;
 	color: white;
 	font-family: "Oxygen", sans-sherif;
-	overflow-y: scroll;
+	overflow-y: none;
 }
 
 a{
@@ -24,11 +24,12 @@ img{
 }
 
 .home img{
-	width: 100%;
 	-webkit-filter: grayscale(100%) contrast(100%);
 	filter: grayscale(100%) contrast(200%) brightness(60%);
 }
 
+
+/*NAVIGATION BAR*/
 aside{
 	position: fixed;
 	background: #222;
@@ -42,10 +43,18 @@ aside{
 	padding: 0;
 }
 
-aside img{
-	filter: grayscale(100%) contrast(60%) brightness(50%);
-	margin-bottom: 10px;
+aside div.vertical-align
+{
+	top: 15%;
+	width: 100%;
+	position: absolute;
+	transition: all 0.35s;
 }
+
+aside img{																	/*UNUSED*/
+	filter: grayscale(100%) contrast(60%) brightness(50%);
+	margin-bottom: -3 px;
+}            			
 
 .material-icons.md-36
 {
@@ -54,8 +63,9 @@ aside img{
 
 aside a{
 	display: block;
-	padding: 15px 0px;
+	padding: 15px 0px;	
 	color: white;
+	margin: 50% 0;
 	transition: all 0.35s;
 	text-transform: uppercase;
 	font-size: 0.75em;
@@ -70,22 +80,264 @@ aside p
 
 aside a:hover
 {
-	background: #000;
+	background: #b2b2b2;
+	color: #222;
 }
 
-aside nav a:nth-child(2)
-{
-	background: #000;
-}
-
-aside nav a:nth-child(2):hover
+aside nav a.active:hover
 {
 	background: #b2b2b2;
 	color: #222;
 }
 
+aside nav a.active
+{
+	background: #000;
+	color: #f8d307;
+}
+
+aside a.home
+{
+	margin-top: 0px;
+}
+
+/*MAIN BODY*/
+
 main{
 	max-width: 980px;
 	margin-left: 20%;
 	padding: 12px 50px;
+}
+
+header{
+	text-align:center;
+}
+
+header h1{
+	font-weight: bold;
+	font-size: 4em;
+	letter-spacing: 4px;
+}
+
+header h5{
+	font-weight: 300;
+	font-size: 1.2em;
+	letter-spacing: 4px;
+	color: #b2b2b2;
+}
+
+.about,.folio,.contact
+{
+	line-height: 1.5em;
+	letter-spacing: 1px;
+	font-weight: 300px;
+}
+
+.about h2,.folio h2,.contact h2
+{
+	font-weight: 600;
+	text-transform: uppercase;
+	padding-bottom: 10px;
+	margin: 100px 0 0 0;
+	letter-spacing: 4px;
+}
+
+
+/*ABOUT*/
+.about p
+{
+	color: #b2b2b2;
+	font-size: 1em;
+}
+
+.about span
+{
+	font-weight: 600;
+	color: white;
+}
+
+.about h3{
+	font-weight: 400;
+	margin: 50px 0;
+}
+
+.container{
+	width: 100%;		/*unused*/
+	background-color: #b2b2b2;
+}
+
+
+/*FOLIO*/
+.folio h3{              /*unused*/
+	color: white;
+	font-weight: 300;
+	letter-spacing: 2px;
+}
+
+.folio p{
+	font-size: 0.875em;
+	color: #b2b2b2;
+}
+
+
+
+/*CONTACT*/
+label{
+	color: #b2b2b2;
+}
+
+form input[type="text"],select,textarea{
+	width: 100%;
+	padding: 12px;
+	border: none;
+	border: 1px solid #222;
+	background: transparent;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+	color: #b2b2b2;
+}
+
+form input[type="text"]:focus,textarea:focus{
+	outline:none;
+	border: 1px solid #009688;
+}
+
+input[type="submit"]
+{
+	background-color: transparent;
+	color: #b2b2b2;
+	text-transform: uppercase;
+	padding: 12px 20px;
+	border: 1px solid #222;
+	cursor: pointer;
+	transition: all 0.35s;
+}
+
+input[type="submit"]:hover
+{
+	background-color: #b2b2b2;
+	color: #222;
+}
+
+.contact .container{
+	margin-top: 20px;
+	margin-bottom: 10px;
+	background: transparent;
+	padding: 20px 0;
+}
+
+
+
+/*FOOTER*/
+.footer{
+	border-top: 1px solid #222;
+}
+
+.top-bar {
+	padding: 20px 0;
+	text-align: center;
+}
+
+.top-bar a{
+	margin: 10px;
+	font-size: 2em;
+	color: #b2b2b2;
+	transition: all 0.35s;
+	display: inline-block;
+}
+
+.top-bar a:hover{
+	transform: scale(1.1);
+	color: #009688;
+}
+
+.bottom-bar{
+	background: #000;
+	font-size: 0.75em;
+	text-align: center;
+}
+
+
+
+/*Resizing For Various Devices*/
+@media (max-width: 601px)
+{
+	aside{
+		display: none;
+	}
+
+	main{
+		width: 100%;
+		margin: 0 auto;
+		padding: 12px 25px;
+	}
+
+	header{
+		margin-top: 80px;
+	}
+
+	header h1{
+		font-size: 3em;
+		line-height: 1.4em;
+	}
+
+	header h5{
+		font-size: 1em;
+		letter-spacing: 2px;
+	}
+
+	.mobile-nav{
+		position: fixed;
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		background: rgba(0,0,0,0,8);
+		z-index: 1;		
+	}
+
+	.mobile-nav a{
+		width: 100%;
+		color: #b2b2b2;
+		text-transform: uppercase;
+		font-size: 0.875em;
+		letter-spacing: 2px;
+		text-align: center;
+		padding: 10px 10px;
+		transition: all 0.35s;
+		text-decoration: underline;
+	}
+
+	.mobile-nav a:hover{
+		background: #b2b2b2;
+		color: #222;
+	}
+}
+
+@media(min-width: 600px)
+{
+	.mobile-nav{
+		display: none;
+	}
+}
+
+@media(max-width: 1197px)
+{
+aside div.vertical-align
+{
+	top: 0%;
+	position: absolute;
+}
+aside a{
+	margin: 0%;
+}
+}
+
+@media(min-width:2500px)
+{
+aside div.vertical-align
+{
+	top: 45%;
+	position: absolute;
+}
 }
